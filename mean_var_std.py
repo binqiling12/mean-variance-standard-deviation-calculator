@@ -1,13 +1,16 @@
 import numpy as np
 
-data = [0,1,2,3,4,5,6,7,8]
 
 
-def calculate(list):
-  if len(list) != 9:
-    return ValueError("List must contain nine numbers.")
 
-  matrix = np.array(data_list).reshape(3,3)
+def calculate(numbers):
+  if len(numbers) != 9:
+    raise ValueError("List must contain nine numbers.")
+
+
+
+  matrix = np.array(numbers).reshape(3,3)
+
   mean_col = np.mean(matrix, axis=0).tolist()
   mean_row = np.mean(matrix, axis=1).tolist()
   mean_all = np.mean(matrix).tolist()
